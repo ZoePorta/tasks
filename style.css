@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  --primaryColor: black;
+  --secondaryColor: white;
+  font-family: 'Roboto', sans-serif;
+
+  background: var(--secondaryColor);
+  color: var(--primaryColor);
+}
+
+
+header{
+background-color: var(--primaryColor);
+color: var(--secondaryColor);
+padding: 2rem;
+}
+
+header h1{
+  font-size: 3rem;
+  text-align: center;
+}
+
+main{
+  width: 100vw;
+    max-width: 500px;
+    margin: auto;
+}
+
+form{
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  grid-template-columns: auto auto;
+  align-items: center;
+
+}
+
+form > *:not(button){
+  grid-column: span 2;
+}
+
+form > label, form > input{
+  display: block;
+  width: 100%;
+}
+
+form > input{
+  padding: 0.2rem 0.5rem ;
+}
+
+form fieldset{
+  text-align: center;
+  padding: 0.5rem;
+  border: none;
+  display: inline-block;
+
+}
+
+form fieldset label:first-of-type{
+margin-right: 0.5rem;
+}
+
+form button{
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  background-color: var(--primaryColor);
+  color: var(--secondaryColor);
+  border: none;
+}
+
+
+.important .text{
+  font-weight: bold;
+}
+
+.done .text{
+  text-decoration: line-through;
+}
+
+ul{
+  width: 80%;
+  margin: auto;
+}
+
+
+ul li{
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1rem 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  gap: 0.2rem 1rem;
+
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--primaryColor);
+
+}
+
+ul li input{
+  grid-row: span 2;
+  width: 1rem;
+  height: 1rem;
+
+}
+
+@media (min-width: 700px){
+  form{
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: 1fr form form;
+  }
+
+  form > input, form> label{
+    grid-column: span 3;
+  }
+  form > fieldset {
+    grid-column: 1/2;
+  }
+}
