@@ -194,9 +194,27 @@ function clearList(){
 
 
 
-
-
 //Añadimos los event listeners
 form.addEventListener("submit", addTask)
 taskUl.addEventListener("click", toggleDone)
 clearButton.addEventListener("click", clearList)
+
+
+
+
+
+////////////////// MODO NOCHE ///////////
+
+//Seleccionar el botón
+const modeButton = document.querySelector("#mode")
+
+//Seleccionar el HTML para cambiarle la clase
+const html = document.querySelector("html")
+
+
+//Función para cambiar el modo
+function toggleMode(){
+  html.classList.toggle("noche")
+}
+
+modeButton.addEventListener("click", toggleMode)

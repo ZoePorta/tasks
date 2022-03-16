@@ -15,11 +15,37 @@ html{
   color: var(--primaryColor);
 }
 
+html.noche{
+    --primaryColor: rgb(177, 177, 177);
+  --secondaryColor: black;
+}
+
 
 header{
 background-color: var(--primaryColor);
 color: var(--secondaryColor);
 padding: 2rem;
+}
+
+button#mode{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  font-size: 0;
+  border: none;
+  background-image: url(./icons/moon.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+.noche button#mode{
+  background-image: url(./icons/sun.svg);
 }
 
 header h1{
